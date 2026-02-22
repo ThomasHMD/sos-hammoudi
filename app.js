@@ -18,9 +18,18 @@ const resultError = document.getElementById('result-error');
 const errorMessage = document.getElementById('error-message');
 
 // --- Form submit ---
+let lastSubmitAt = 0;
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   hideResults();
+
+  const now = Date.now();
+  if (now - lastSubmitAt < 15000) {
+    showError('Requête déjà envoyée, patiente encore quelques secondes...');
+    return;
+  }
+  lastSubmitAt = now;
 
   const email = emailInput.value.trim();
   if (!email) return;
