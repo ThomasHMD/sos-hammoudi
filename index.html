@@ -49,37 +49,13 @@
         <legend class="form__legend">
           <span class="form__step">02</span> TON SCHÉMA
         </legend>
-        <div class="tabs">
-          <button type="button" class="tabs__btn tabs__btn--active" data-tab="describe">
-            ✏️ DÉCRIRE
-          </button>
-          <button type="button" class="tabs__btn" data-tab="upload">
-            📁 CHARGER
-          </button>
-        </div>
-        <div class="tabs__panel tabs__panel--active" id="panel-describe">
-          <textarea
-            id="description"
-            name="description"
-            class="form__textarea"
-            placeholder="Décris le schéma que tu veux... Ex: Un organigramme avec 3 niveaux, CEO en haut, puis 4 directeurs, puis les équipes..."
-            rows="5"
-          ></textarea>
-        </div>
-        <div class="tabs__panel" id="panel-upload">
-          <label class="form__upload" id="upload-zone">
-            <input type="file" id="file-input" name="file" accept="image/*" hidden>
-            <div class="form__upload-content">
-              <span class="form__upload-icon">📎</span>
-              <span class="form__upload-text">Glisse ou clique pour charger</span>
-              <span class="form__upload-formats">PNG, JPG, SVG</span>
-            </div>
-          </label>
-          <div id="file-preview" class="form__file-preview" hidden>
-            <span id="file-name"></span>
-            <button type="button" id="file-remove" class="form__file-remove">✕</button>
-          </div>
-        </div>
+        <textarea
+          id="description"
+          name="description"
+          class="form__textarea"
+          placeholder="Décris le schéma que tu veux... Ex: Un organigramme avec 3 niveaux, CEO en haut, puis 4 directeurs, puis les équipes..."
+          rows="5"
+        ></textarea>
       </fieldset>
 
       <!-- Step 3: Engine -->
@@ -92,16 +68,8 @@
             <input type="radio" name="engine" value="ai" checked>
             <div class="radio-card__body">
               <span class="radio-card__icon">🤖</span>
-              <span class="radio-card__label">IA</span>
-              <span class="radio-card__desc">Génération auto</span>
-            </div>
-          </label>
-          <label class="radio-card">
-            <input type="radio" name="engine" value="canva">
-            <div class="radio-card__body">
-              <span class="radio-card__icon">🎨</span>
-              <span class="radio-card__label">CANVA</span>
-              <span class="radio-card__desc">Design pro</span>
+              <span class="radio-card__label">MERMAID</span>
+              <span class="radio-card__desc">IA + Mermaid</span>
             </div>
           </label>
           <label class="radio-card">
