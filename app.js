@@ -45,10 +45,12 @@ form.addEventListener('submit', async (e) => {
     body.append('style', style);
     body.append('description', descriptionInput.value.trim());
 
-    const response = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      body,
-    });
+    const minDelay = new Promise(resolve => setTimeout(resolve, 3000));
+
+    const [response] = await Promise.all([
+      fetch(WEBHOOK_URL, { method: 'POST', body }),
+      minDelay,
+    ]);
 
     const data = await response.json();
 
