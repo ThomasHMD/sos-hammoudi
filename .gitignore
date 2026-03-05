@@ -2,3 +2,7 @@
 .claude/
 node_modules/
 *.log
+Documentation/
+Documentation/*
+documentation/
+documentation/*
